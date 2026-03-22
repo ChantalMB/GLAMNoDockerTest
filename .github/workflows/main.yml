@@ -14,7 +14,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: "Agent-based Models/"
+          source_file: '"Agent-based Models/"'
           destination_repo: "ChantalMB/ActionsTest"
           user_email: "chantalbrousseau@rogers.com"
           user_name: "ChantalMB"
