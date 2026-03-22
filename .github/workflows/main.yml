@@ -17,6 +17,7 @@ jobs:
         source_file: './"Agent-based Models"'
         destination_repo: 'ChantalMB/ActionsTest'
         destination_folder: '.'
+        destination_branch: 'master'
         user_email: 'chantalbrousseau@rogers.com'
         user_name: 'ChantalMB'
         commit_message: 'Testing GH actions'
