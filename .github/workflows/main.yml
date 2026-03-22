@@ -1,24 +1,23 @@
-name: Push Files
+name: Push File
 
 on: push
 
 jobs:
-  copy-files:
+  copy-file:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v2
 
-      - name: Push test folder & 1 file
-        uses: dobbelina/multi_file_bandit@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: '"Agent-based Models/"'
-          destination_repo: "ChantalMB/ActionsTest"
-          user_email: "chantalbrousseau@rogers.com"
-          user_name: "ChantalMB"
-          commit_message: ${{ github.event.head_commit.message }}
-          rsync_option: "-avrh --delete" # Deletes any files in the 
-                                         # destination that is not
-                                         # present in the source 
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: '"Agent-based Models/"'
+        destination_repo: 'ChantalMB/ActionsTest'
+        destination_folder: '/'
+        user_email: 'chantalbrousseau@rogers.com'
+        user_name: 'ChantalMB'
+        commit_message: 'Testing GH actions'
+        
