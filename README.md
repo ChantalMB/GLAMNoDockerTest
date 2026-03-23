@@ -1,5 +1,6 @@
-# sparql-and-lod
+# sonification
 
-[![DOI](https://zenodo.org/badge/140363490.svg)](https://zenodo.org/badge/latestdoi/140363490)
+[![DOI](https://zenodo.org/badge/140872557.svg)](https://zenodo.org/badge/latestdoi/140872557)
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/o-date/sparql-and-lod/master?filepath=sparql-intro.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/o-date/sonification/master)
+
