@@ -1,6 +1,0 @@
-numpy
-pandas
-matplotlib
-imageio
-laspy[lazrs,laszip]
-datashader

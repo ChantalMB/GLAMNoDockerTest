@@ -1,6 +1,0 @@
-User-agent: *
-Disallow:   /atlas/mapping
-
-User-agent: *
-Disallow:   /extlink
-

@@ -1,4 +1,0 @@
-tracery
-numpy
-networkx
-matplotlib
