@@ -1,23 +1,20 @@
-name: Push File
-
-on: push
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  copy-file:
+  deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - uses: actions/checkout@master
 
-    - name: Pushes test file
-      uses: dmnemec/copy_file_to_another_repo_action@main
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
       env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source_file: 'Databases/*'
-        destination_repo: 'ChantalMB/ActionsTest'
-        destination_folder: '/'
-        user_email: 'chantalbrousseau@rogers.com'
-        user_name: 'ChantalMB'
-        commit_message: 'Testing GH actions'
-        
+        REPO: self
+        BRANCH: scraping
+        FOLDER: Scraping
+        GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
